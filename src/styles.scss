@@ -2,7 +2,7 @@
 
 html,
 body {
-  height: 100%;
+  height: fit-content;
 }
 body {
   margin: 0;
@@ -11,5 +11,5 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: rgba(24, 24, 24, 1);
-  color: rgb(255, 255, 230);
+  color: #e9e0e4;
 }

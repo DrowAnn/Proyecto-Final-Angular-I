@@ -1,6 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+export interface DataPage {
+  info: {
+    count: number;
+  };
+  results: [{ name: string; species: string }];
+}
+
 @Injectable({
   providedIn: 'root',
 })
