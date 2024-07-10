@@ -1,28 +1,16 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { PageEvent, MatPaginatorModule } from '@angular/material/paginator';
-import { JsonPipe } from '@angular/common';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { PageEvent } from '@angular/material/paginator';
 import {
   DataPage,
   DataRickAndMortyService,
 } from '../../services/data-rick-and-morty.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from '../../modules/material/material.module';
 
 @Component({
   selector: 'app-paginator',
   standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatSlideToggleModule,
-    MatPaginatorModule,
-    JsonPipe,
-    HttpClientModule,
-  ],
+  imports: [MaterialModule, HttpClientModule],
   providers: [DataRickAndMortyService],
   templateUrl: './paginator.component.html',
   styleUrl: './paginator.component.scss',

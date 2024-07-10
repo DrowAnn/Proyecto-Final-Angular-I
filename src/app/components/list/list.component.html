@@ -1,7 +1,9 @@
 <h3 class="title">Rick And Morty Characters</h3>
 <mat-action-list class="characters-list">
   @for (character of dataPage.results; track $index) {
-  <button mat-button (click)="save()">{{ character.name }}</button>
+  <button mat-button (click)="openCharacter(character.id)">
+    {{ character.name }}
+  </button>
   <p>{{ character.species }}</p>
   }
 </mat-action-list>

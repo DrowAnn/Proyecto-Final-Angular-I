@@ -5,7 +5,7 @@ export interface DataPage {
   info: {
     count: number;
   };
-  results: [{ name: string; species: string }];
+  results: [{ name: string; species: string; id: number }];
 }
 
 @Injectable({

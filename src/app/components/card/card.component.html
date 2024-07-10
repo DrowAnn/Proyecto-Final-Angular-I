@@ -1,1 +1,25 @@
-<p>card works!</p>
+@if (characterInfo) {
+<h6 style="padding-left: 4%; padding-top: 4%; margin: 0%">
+  {{ characterInfo.name }}`s Card
+</h6>
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ characterInfo.name }}</mat-card-title>
+    <mat-card-subtitle>{{ characterInfo.status }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="characterInfo.image" alt="Photo" />
+  <mat-card-content>
+    <ul>
+      <li>Specie: {{ characterInfo.species }}</li>
+      <li>Gender: {{ characterInfo.gender }}</li>
+      <li>Origin: {{ characterInfo.origin.name }}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+  </mat-card-actions>
+</mat-card>
+} @else {
+<mat-spinner class="spinner"></mat-spinner>
+}
